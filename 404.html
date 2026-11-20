@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fashion Art Academy · тесты</title>
+<script>
+(function(){
+  var p = location.pathname, base = "/";
+  if (/github\.io$/.test(location.hostname)) { var s = p.split("/").filter(Boolean); if (s.length) base = "/" + s[0] + "/"; }
+  var rest = p.slice(base.length).toLowerCase();
+  var lang = /^uz/.test(rest) ? "uz" : /^ru/.test(rest) ? "ru" : ((navigator.language || "").toLowerCase().indexOf("uz") === 0 ? "uz" : "ru");
+  var slug = (rest.match(/(postuplenie|ekzamen|novichok)/) || [])[1];
+  location.replace(base + lang + "/" + (slug ? slug + "/" : "") + location.search);
+})();
+</script></head><body></body></html>

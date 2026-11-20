@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Мини-экзамен по фэшн-иллюстрации · Fashion Art Academy</title>
+<meta name="description" content="12 заданий в формате творческого экзамена: пропорции, ткани, свет, композиция и цвет. / Ijodiy imtihon formatidagi 12 ta topshiriq.">
+<meta property="og:title" content="Сдашь творческий экзамен по фэшн-иллюстрации? Проверь себя">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23111%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-size=%2716%27 text-anchor=%27middle%27 fill=%27%23B8935A%27 font-family=%27serif%27%3EFA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap&subset=cyrillic,latin-ext" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div class="lang-sw"><button data-l="ru">RU</button><button data-l="uz">UZ</button></div>
+    <div class="brand">Fashion Art Academy<span class="brand-sub" data-i="brand_sub"></span></div>
+  </div>
+
+
+  <section class="screen active" id="s-intro">
+    <div class="center"><span class="tag" data-i="tag"></span></div>
+    <h1 class="title"><span class="big">Fashion</span><span class="script">illustration</span></h1>
+    <p class="lead" data-i="lead"></p>
+    <div class="rule"></div>
+    <p class="desc" data-i="desc"></p>
+    <div class="stats">
+      <div class="stat"><div class="n">12</div><div class="l" data-i="st1"></div></div>
+      <div class="stat"><div class="n">4</div><div class="l" data-i="st2"></div></div>
+      <div class="stat"><div class="n">5</div><div class="l" data-i="st3"></div></div>
+    </div>
+    <button class="btn" data-go="start" data-i="btn1"></button>
+    <p class="note" data-i="note"></p>
+    <div class="gets">
+      <div class="h-sec" data-i="gets_h"></div>
+      <ul class="list">
+        <li><span class="roman">I</span><div><div class="t" data-i="g1t"></div><div class="s" data-i="g1s"></div></div></li>
+        <li><span class="roman">II</span><div><div class="t" data-i="g2t"></div><div class="s" data-i="g2s"></div></div></li>
+        <li><span class="roman">III</span><div><div class="t" data-i="g3t"></div><div class="s" data-i="g3s"></div></div></li>
+        <li><span class="roman">IV</span><div><div class="t" data-i="g4t"></div><div class="s" data-i="g4s"></div></div></li>
+      </ul>
+    </div>
+    <div class="proof"><div class="q" data-i="proof"></div><div class="a">Fashion Art Academy</div></div>
+    <button class="btn" data-go="start" style="margin-top:32px" data-i="btn2"></button>
+    <p class="note" data-i="disclaimer" style="margin-top:18px"></p>
+  </section>
+
+  <section class="screen" id="s-quiz">
+    <div class="qtop"><button class="back" id="back" data-i="back"></button><span id="counter"></span></div>
+    <div class="bar"><i id="bar"></i></div>
+    <div class="qblock" id="qblock"></div>
+    <h2 class="qtext" id="qtext"></h2>
+    <p class="qhint" id="qhint"></p>
+    <div id="qimg"></div>
+    <div class="opts" id="opts"></div>
+    <p class="honest" id="honest" data-i="honest"></p>
+  </section>
+
+  <section class="screen" id="s-load">
+    <div class="load">
+      <div class="h-sec-i" data-i="load_h"></div>
+      <div class="pencil"></div>
+      <ul class="steps" id="steps">
+        <li><span class="d"></span><span data-i="step1"></span></li>
+        <li><span class="d"></span><span data-i="step2"></span></li>
+        <li><span class="d"></span><span data-i="step3"></span></li>
+        <li><span class="d"></span><span data-i="step4"></span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="screen" id="s-result">
+    <div class="score-card">
+      <div class="eyebrow" data-i="res_eyebrow"></div>
+      <div class="pct"><span id="pct">0</span><small id="ofmax">/12</small></div>
+      <div class="level" id="level"></div>
+      <div class="level-t" id="levelT"></div>
+      <p class="level-d" id="levelD"></p>
+      <div class="scale" id="scale"></div>
+      <div class="scale-l"><span data-i="sc1"></span><span data-i="sc2"></span><span data-i="sc3"></span></div>
+    </div>
+    <div class="sec"><div class="h-sec" data-i="skills_h"></div><div class="skills" id="skills"></div></div>
+    <div class="sec"><div class="h-sec-i" data-i="weak_h"></div><div id="weak"></div><div class="timeline" id="timeline"></div></div>
+    <div class="sec"><div class="h-sec-i" data-i="review_h"></div><div class="review" id="review"></div><button class="toggle" id="toggleRv" data-i="toggle"></button></div>
+    <div class="bridge"><div class="rule gold"></div><div class="h-sec-i" id="bridgeT"></div></div>
+    <div class="offer" id="offer">
+      <div class="ttl"><span data-i="offer_t"></span><span class="ttl-s" data-i="offer_ts"></span></div>
+      <p class="sub" data-i="offer_sub"></p>
+      <ul class="list" id="offerList"></ul>
+      <div class="price">
+        <div class="old" data-i="price_old"></div>
+        <div class="new">100 000 <span data-i="price_unit"></span></div>
+        <div class="why" data-i="price_why"></div>
+        <div class="timer">
+          <div class="c"><b id="th">48</b><i data-i="t_h"></i></div>
+          <div class="c"><b id="tm">00</b><i data-i="t_m"></i></div>
+          <div class="c"><b id="ts">00</b><i data-i="t_s"></i></div>
+        </div>
+        <div class="timer-l" id="timerL" data-i="timer_l"></div>
+        <div class="expired" id="expired" data-i="expired"></div>
+      </div>
+      <form id="form" novalidate>
+        <div class="f" id="fName"><label for="name" data-i="f_name"></label><input id="name" autocomplete="given-name" data-ip="f_name_ph"><div class="err" data-i="f_name_err"></div></div>
+        <div class="f" id="fPhone"><label for="phone" data-i="f_phone"></label><div class="phone"><span>+998</span><input id="phone" inputmode="tel" autocomplete="tel-national" placeholder="90 123 45 67"></div><div class="err" data-i="f_phone_err"></div></div>
+        <div class="f"><label data-i="f_time"></label>
+          <div class="chips" id="timeChips">
+            <button type="button" class="chip" data-v="Будни, утро" data-i="ch1"></button>
+            <button type="button" class="chip" data-v="Будни, вечер" data-i="ch2"></button>
+            <button type="button" class="chip" data-v="Выходные" data-i="ch3"></button>
+          </div></div>
+        <button class="btn" type="submit" id="submit" data-i="submit"></button>
+        <p class="secure" data-i="secure"></p>
+      </form>
+
+    </div>
+  </section>
+
+  <section class="screen" id="s-done">
+    <div class="done">
+      <div class="big" data-i="done_big"></div>
+      <h2><span data-i="done_h"></span><span id="doneName"></span></h2>
+      <div class="rule gold"></div>
+      <p data-i="done_p"></p>
+      <p data-i="done_fast"></p>
+      <a class="btn" id="tgBtn" href="#" target="_blank" rel="noopener" data-i="tg_btn"></a>
+      <p class="note" id="contactText"></p>
+      <div class="share">
+        <div class="h-sec-i" data-i="share_h"></div>
+        <p data-i="share_p"></p>
+        <button class="btn outline" id="shareBtn" data-i="share_btn"></button>
+        <div class="copied" id="copied"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="rule" style="width:18%;margin-bottom:18px"></div>
+    <div class="brand">Fashion Art Academy</div>
+    <p data-i="footer"></p>
+  </footer>
+
+</div>
+
+<script src="../config.js"></script>
+<script src="../assets/core.js"></script>
+<script>
+(function(){
+const F = FAA, $ = F.$, tr = F.tr, T = F.T;
+
+const INK="#111111", GOLD="#B8935A", PAPER="#F6F3EE";
+
+/* ---------- РИСУНКИ ---------- */
+const PROP = {
+  9:  {sh:1.4, b:2.1, w:3.0, hp:3.8, cr:4.35, k:6.4, an:8.55},
+  7.5:{sh:1.3, b:2.0, w:2.8, hp:3.5, cr:3.9,  k:5.6, an:7.1},
+  6:  {sh:1.25,b:1.9, w:2.55,hp:3.05,cr:3.35, k:4.6, an:5.65}
+};
+function croquis(N,h,cx,y0,solid){
+  const P=PROP[N], X=u=>(cx+u*h).toFixed(1), Y=u=>(y0+u*h).toFixed(1);
+  const sw=Math.max(.7,h*.045).toFixed(2);
+  const fill=solid?INK:"#fff", st=solid?"none":INK;
+  let s="";
+  // руки
+  [-1,1].forEach(d=>{
+    const pts=`${X(d*.8)},${Y(P.sh+.08)} ${X(d*.88)},${Y(P.w)} ${X(d*.82)},${Y(P.cr+.25)}`;
+    if(solid) s+=`<polyline points="${pts}" fill="none" stroke="${INK}" stroke-width="${(h*.16).toFixed(1)}" stroke-linecap="round" stroke-linejoin="round"/>`;
+    else s+=`<polyline points="${pts}" fill="none" stroke="${INK}" stroke-width="${(h*.2).toFixed(1)}" stroke-linecap="round" stroke-linejoin="round"/><polyline points="${pts}" fill="none" stroke="#fff" stroke-width="${(h*.2-2*sw).toFixed(1)}" stroke-linecap="round" stroke-linejoin="round"/>`;
+  });
+  // ноги
+  [-1,1].forEach(d=>{
+    s+=`<path d="M${X(d*.66)},${Y(P.hp)} L${X(d*.42)},${Y(P.k)} L${X(d*.25)},${Y(P.an)} L${X(d*.31)},${Y(N-.05)} L${X(d*.15)},${Y(N)} L${X(d*.12)},${Y(P.an)} L${X(d*.12)},${Y(P.k)} L${X(d*.03)},${Y(P.cr)} Z" fill="${fill}" stroke="${st}" stroke-width="${sw}" stroke-linejoin="round"/>`;
+  });
+  // торс
+  s+=`<path d="M${X(-.12)},${Y(.92)} L${X(-.13)},${Y(P.sh-.12)} L${X(-.78)},${Y(P.sh)} L${X(-.6)},${Y(P.b)} L${X(-.4)},${Y(P.w)} L${X(-.68)},${Y(P.hp)} L${X(0)},${Y(P.cr)} L${X(.68)},${Y(P.hp)} L${X(.4)},${Y(P.w)} L${X(.6)},${Y(P.b)} L${X(.78)},${Y(P.sh)} L${X(.13)},${Y(P.sh-.12)} L${X(.12)},${Y(.92)} Z" fill="${fill}" stroke="${st}" stroke-width="${sw}" stroke-linejoin="round"/>`;
+  // голова
+  s+=`<ellipse cx="${X(0)}" cy="${Y(.5)}" rx="${(h*.36).toFixed(1)}" ry="${(h*.5).toFixed(1)}" fill="${fill}" stroke="${st}" stroke-width="${sw}"/>`;
+  return s;
+}
+function ruler(N,h,x,y0){
+  let s="";
+  for(let k=0;k<=Math.ceil(N);k++){
+    const y=(y0+Math.min(k,N)*h).toFixed(1);
+    s+=`<line x1="${x}" x2="${x+10}" y1="${y}" y2="${y}" stroke="${GOLD}" stroke-width="1"/>`;
+    if(k<Math.ceil(N)) s+=`<text x="${x+2}" y="${(y0+(k+.5)*h+3).toFixed(1)}" font-size="8" fill="${GOLD}" font-family="Montserrat">${k+1}</text>`;
+  }
+  return s+`<line x1="${x+10}" x2="${x+10}" y1="${y0}" y2="${y0+N*h}" stroke="${GOLD}" stroke-width="1"/>`;
+}
+const figSVG = N => `<svg viewBox="0 0 130 300">${ruler(N,270/N,4,15)}${croquis(N,270/N,72,15)}</svg>`;
+
+function balanceSVG(LT){
+  const N=9,h=30,cx=130,y0=12,P=PROP[9];
+  const pt=(x,y,l)=>`<circle cx="${x}" cy="${y}" r="5" fill="${GOLD}" stroke="#fff" stroke-width="1.5"/><line x1="${x-7}" x2="${x-40}" y1="${y}" y2="${y}" stroke="${GOLD}" stroke-width="1"/><text x="${x-46}" y="${y+5}" text-anchor="end" font-size="15" font-family="Playfair Display, serif" fill="${INK}">${l}</text>`;
+  return `<svg viewBox="0 0 220 300">${croquis(N,h,cx,y0)}
+   ${pt(cx,y0,LT[0])}${pt(cx,y0+(P.sh-.1)*h,LT[1])}${pt(cx,y0+3.3*h,LT[2])}${pt(cx,y0+N*h-4,LT[3])}</svg>`;
+}
+
+function satinSVG(id){
+  const band=(x0,w)=>`<path d="M${x0},0 C${x0+30},60 ${x0-12},140 ${x0+18},200 L${x0+18+w},200 C${x0-12+w},140 ${x0+30+w},60 ${x0+w},0 Z" fill="url(#sat${id})"/>`;
+  return `<svg viewBox="0 0 200 200"><defs><linearGradient id="sat${id}" x1="0" x2="1"><stop offset="0" stop-color="#3a0a14"/><stop offset=".38" stop-color="#8E1F24"/><stop offset=".5" stop-color="#f6dfe1"/><stop offset=".6" stop-color="#9b2a30"/><stop offset="1" stop-color="#2e0710"/></linearGradient></defs>
+  <rect width="200" height="200" fill="#4a0f1c"/>${band(-30,75)}${band(40,70)}${band(105,80)}${band(170,70)}</svg>`;
+}
+function chiffonSVG(id){
+  return `<svg viewBox="0 0 200 200"><rect width="200" height="200" fill="${PAPER}"/>
+  <path d="M30,0 L80,0 L170,200 L120,200Z" fill="#c9a48a"/>
+  <path d="M0,40 C40,30 70,55 110,42 C150,30 180,50 200,40 L200,150 C170,165 140,140 100,158 C60,172 30,150 0,160Z" fill="#E7A9B9" opacity=".42"/>
+  <path d="M0,80 C50,70 80,95 120,82 C160,70 185,88 200,80 L200,200 L0,200Z" fill="#E7A9B9" opacity=".42"/>
+  <path d="M0,160 C30,150 60,172 100,158 C140,140 170,165 200,150" fill="none" stroke="#c97d93" stroke-width="1.2" opacity=".8"/>
+  <path d="M0,40 C40,30 70,55 110,42 C150,30 180,50 200,40" fill="none" stroke="#c97d93" stroke-width="1.2" opacity=".8"/></svg>`;
+}
+function denimSVG(id){
+  return `<svg viewBox="0 0 200 200"><defs><pattern id="tw${id}" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)"><rect width="6" height="6" fill="#33528a"/><line x1="0" y1="0" x2="0" y2="6" stroke="#6f8cc0" stroke-width="2"/></pattern></defs>
+  <rect width="200" height="200" fill="url(#tw${id})"/>
+  <path d="M40,60 L160,60 L150,170 L100,190 L50,170Z" fill="none" stroke="#1f3561" stroke-width="2"/>
+  <path d="M46,66 L154,66 L145,165 L100,183 L55,165Z" fill="none" stroke="#E0913A" stroke-width="1.6" stroke-dasharray="5 3"/>
+  <path d="M50,72 L150,72" stroke="#E0913A" stroke-width="1.6" stroke-dasharray="5 3"/></svg>`;
+}
+function furSVG(id){
+  let s=`<svg viewBox="0 0 200 200"><rect width="200" height="200" fill="#a8896b"/>`, r=7;
+  const rnd=()=>{ r=(r*9301+49297)%233280; return r/233280; };
+  for(let n=0;n<520;n++){
+    const x=rnd()*210-5, y=rnd()*210-5, a=(-60+rnd()*40)*Math.PI/180, L=10+rnd()*16;
+    const c=["#6e5238","#c9ad8e","#8c6c4f","#e3cfb6"][Math.floor(rnd()*4)];
+    s+=`<path d="M${x.toFixed(1)},${y.toFixed(1)} q${(Math.cos(a)*L*.5+3).toFixed(1)},${(Math.sin(a)*L*.5).toFixed(1)} ${(Math.cos(a)*L).toFixed(1)},${(Math.sin(a)*L).toFixed(1)}" stroke="${c}" stroke-width="${(1+rnd()*1.4).toFixed(1)}" fill="none" stroke-linecap="round"/>`;
+  }
+  return s+`</svg>`;
+}
+function knitSVG(id){
+  return `<svg viewBox="0 0 200 200"><defs><pattern id="kn${id}" width="16" height="12" patternUnits="userSpaceOnUse"><rect width="16" height="12" fill="#d8c7b2"/><path d="M1,1 L8,10 L15,1" fill="none" stroke="#a88f74" stroke-width="2.4" stroke-linejoin="round"/></pattern></defs><rect width="200" height="200" fill="url(#kn${id})"/></svg>`;
+}
+function lightSVG(){
+  return `<svg viewBox="0 0 200 190"><defs><linearGradient id="lg1" x1="0" x2="1"><stop offset="0" stop-color="#f7f2ea"/><stop offset=".25" stop-color="#e6ddd0"/><stop offset=".7" stop-color="#9a9187"/><stop offset="1" stop-color="#5e5850"/></linearGradient></defs>
+  <rect width="200" height="190" fill="#fff"/>
+  <ellipse cx="128" cy="168" rx="70" ry="9" fill="rgba(17,17,17,.22)"/>
+  <path d="M80,30 L120,30 Q150,100 166,158 Q100,174 34,158 Q50,100 80,30Z" fill="url(#lg1)" stroke="#5e5850" stroke-width="1"/>
+  <path d="M66,80 Q60,120 52,156" stroke="#fff" stroke-width="5" opacity=".7" fill="none" stroke-linecap="round"/>
+  <path d="M100,40 Q104,100 108,166" stroke="#5e5850" stroke-width="1" opacity=".6" fill="none"/>
+  <path d="M120,45 Q132,100 142,162" stroke="#3f3a34" stroke-width="1.2" opacity=".6" fill="none"/>
+  <rect x="78" y="22" width="44" height="10" fill="#d9d0c3" stroke="#5e5850" stroke-width="1"/></svg>`;
+}
+function sheetSVG(kind,id){
+  let fig="", extra="";
+  if(kind==="tiny") fig=croquis(9,40/9,50,50,true);
+  if(kind==="cut")  fig=croquis(9,160/9,50,4,true);
+  if(kind==="good"){ fig=croquis(9,104/9,40,18,true); extra=`<rect x="68" y="34" width="20" height="26" fill="none" stroke="#bbb"/><rect x="68" y="72" width="20" height="30" fill="none" stroke="#bbb"/>`; }
+  if(kind==="edge") fig=croquis(9,100/9,86,22,true);
+  return `<svg viewBox="0 0 100 140"><defs><clipPath id="cp${id}"><rect x="5" y="5" width="90" height="130"/></clipPath></defs><rect x="5" y="5" width="90" height="130" fill="#fff"/><g clip-path="url(#cp${id})">${fig}${extra}</g><rect x="5" y="5" width="90" height="130" fill="none" stroke="#cfc6b8"/></svg>`;
+}
+function dressSVG(){
+  return `<svg viewBox="0 0 160 200"><rect width="160" height="200" fill="#fff"/>
+  <path d="M65,28 Q80,42 95,28 L122,34 Q120,52 108,60 Q98,74 95,92 Q125,140 142,182 Q80,194 18,182 Q35,140 65,92 Q62,74 52,60 Q40,52 38,34 Z" fill="${PAPER}" stroke="${INK}" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M65,92 L95,92" stroke="${INK}" stroke-width="1.6"/>
+  <path d="M74,96 Q66,140 52,186 M86,96 Q94,140 108,186 M80,96 L80,190" stroke="${INK}" stroke-width=".8" fill="none" opacity=".6"/></svg>`;
+}
+const palSVG = cs => `<svg viewBox="0 0 120 50">${cs.map((c,n)=>`<rect x="${n*40}" y="0" width="40" height="50" fill="${c}"/>`).join("")}</svg>`;
+
+
+
+const I18N = {
+ ru:{
+  page_title:"Мини-экзамен по фэшн-иллюстрации · Fashion Art Academy",
+  tag:"Мини-экзамен · 5 минут",
+  lead:"Сдашь творческий экзамен?<br><b>Проверь себя</b> на реальных заданиях",
+  desc:"12 заданий с картинками, как на вступительном: найди правильные пропорции, узнай ткань, определи свет, выбери лучшую композицию. В конце увидишь свой балл и разбор каждой ошибки.",
+  st1:"заданий", st2:"навыка", st3:"минут",
+  btn1:"Начать экзамен <span class=\"arr\">→</span>", btn2:"Проверить себя <span class=\"arr\">→</span>",
+  note:"Бесплатно. Карандаш не нужен, только внимательность.",
+  gets_h:"Что проверяем",
+  g1t:"Фигура и пропорции", g1s:"Сколько «голов» в модели, где проходит линия баланса",
+  g2t:"Ткани и свет", g2s:"Узнаешь ли атлас и шифон по рисунку, откуда падает свет",
+  g3t:"Композиция и цвет", g3s:"Как разместить фигуру на листе, силуэты, цветовые сочетания",
+  g4t:"Экзаменационное задание", g4s:"Как раскрыть тему и распределить время на экзамене",
+  proof:"«Все наши ученицы, которые регулярно ходили на занятия, поступили в вуз»",
+  disclaimer:"Задания составлены по типовым требованиям творческих экзаменов по дизайну одежды",
+  back:"← Назад", counter_intro:"Знакомство · {n} из {t}", counter:"Задание {n} из {t}", honest:"Правильные ответы и разбор — в конце",
+  load_h:"Проверяем твою работу…", step1:"Сверяем ответы", step2:"Оцениваем 4 навыка", step3:"Сравниваем с уровнем экзамена", step4:"Готовим разбор ошибок",
+  res_eyebrow:"Твой результат", sc1:"начало пути", sc2:"уверенный старт", sc3:"почти готова",
+  skills_h:"Навыки по блокам", weak_h:"Где ты теряешь баллы", review_h:"Разбор всех заданий", toggle:"Показать все задания",
+  of3:"{v} из 3", st_strong:"сильная сторона", st_gap:"есть пробелы", st_weak:"нужно подтянуть",
+  rv_ok:"верно", rv_bad:"ошибка", your:"Твой ответ:", right:"Правильно:", variant:"вариант {l}",
+  timeline_s:"Персональный план подготовки покажет, сколько времени нужно на каждый навык и в каком порядке их прокачивать.",
+  bridge:"Ошибок: {m}. Главная зона роста — <b style=\"font-weight:400;color:var(--gold)\">{w}</b>.<br>Знать ответ и нарисовать — разные вещи. Преподаватель покажет, как это сделать рукой.",
+  bridge0:"Ты знаешь теорию на отлично.<br>Теперь важно, чтобы рисунок был на том же уровне. Это проверит преподаватель.",
+  offer_t:"Персональный разбор", offer_ts:"с преподавателем", offer_sub:"Первый урок в академии, на котором мы разберём именно твой уровень",
+  submit:"Записаться на разбор <span class=\"arr\">→</span>",
+  done_h:"Место на разборе<br>за тобой, ",
+  done_p:"Администратор свяжется с тобой в ближайшее время и подберёт удобный день. Возьми с собой 2–3 своих рисунка: преподаватель разберёт их на уроке вместе с ошибками из экзамена.",
+  share_h:"Поступаешь с подругой?", share_p:"Отправь ей экзамен, сравните баллы",
+  tg:"Здравствуйте! Я {name}, прошла мини-экзамен по фэшн-иллюстрации ({s} из {t}). Хочу записаться на разбор с преподавателем за 100 000 сум. Мой номер: +998{phone}"
+ },
+ uz:{
+  page_title:"Fashion-illyustratsiya bo'yicha mini-imtihon · Fashion Art Academy",
+  tag:"Mini-imtihon · 5 daqiqa",
+  lead:"Ijodiy imtihonni topshira olasanmi?<br><b>Haqiqiy topshiriqlarda</b> o'zingni sinab ko'r",
+  desc:"Kirish imtihonidagidek 12 ta rasmli topshiriq: to'g'ri proporsiyalarni top, matoni tani, yorug'likni aniqla, eng yaxshi kompozitsiyani tanla. Oxirida balingni va har bir xatoning tahlilini ko'rasan.",
+  st1:"topshiriq", st2:"ko'nikma", st3:"daqiqa",
+  btn1:"Imtihonni boshlash <span class=\"arr\">→</span>", btn2:"O'zimni sinash <span class=\"arr\">→</span>",
+  note:"Bepul. Qalam kerak emas, faqat diqqat.",
+  gets_h:"Nimani tekshiramiz",
+  g1t:"Qomat va proporsiyalar", g1s:"Modelda nechta «bosh», muvozanat chizig'i qayerdan o'tadi",
+  g2t:"Matolar va yorug'lik", g2s:"Atlas va shifonni rasmdan taniysanmi, yorug'lik qayerdan tushadi",
+  g3t:"Kompozitsiya va rang", g3s:"Qomatni varaqda qanday joylashtirish, siluetlar, rang uyg'unligi",
+  g4t:"Imtihon topshirig'i", g4s:"Imtihonda mavzuni qanday ochish va vaqtni taqsimlash",
+  proof:"«Darslarga muntazam qatnagan barcha o'quvchilarimiz oliygohga kirdi»",
+  disclaimer:"Topshiriqlar kiyim dizayni bo'yicha ijodiy imtihonlarning odatiy talablari asosida tuzilgan",
+  back:"← Orqaga", counter_intro:"Tanishuv · {t} tadan {n}", counter:"{t} tadan {n}-topshiriq", honest:"To'g'ri javoblar va tahlil — oxirida",
+  load_h:"Ishingni tekshiryapmiz…", step1:"Javoblarni solishtiryapmiz", step2:"4 ta ko'nikmani baholayapmiz", step3:"Imtihon darajasi bilan solishtiryapmiz", step4:"Xatolar tahlilini tayyorlayapmiz",
+  res_eyebrow:"Natijang", sc1:"yo'l boshi", sc2:"ishonchli start", sc3:"deyarli tayyor",
+  skills_h:"Bloklar bo'yicha ko'nikmalar", weak_h:"Qayerda ball yo'qotyapsan", review_h:"Barcha topshiriqlar tahlili", toggle:"Barcha topshiriqlarni ko'rsatish",
+  of3:"3 tadan {v}", st_strong:"kuchli tomon", st_gap:"bo'shliqlar bor", st_weak:"kuchaytirish kerak",
+  rv_ok:"to'g'ri", rv_bad:"xato", your:"Sening javobing:", right:"To'g'ri javob:", variant:"{l} variant",
+  timeline_s:"Shaxsiy tayyorgarlik rejasi har bir ko'nikmaga qancha vaqt kerakligini va ularni qaysi tartibda kuchaytirishni ko'rsatadi.",
+  bridge:"Xatolar: {m}. Asosiy o'sish nuqtasi — <b style=\"font-weight:400;color:var(--gold)\">{w}</b>.<br>Javobni bilish va chizish — boshqa-boshqa narsa. O'qituvchi buni qo'lda qanday qilishni ko'rsatadi.",
+  bridge0:"Nazariyani a'lo bilasan.<br>Endi rasming ham shu darajada bo'lishi muhim. Buni o'qituvchi tekshiradi.",
+  offer_t:"Shaxsiy tahlil", offer_ts:"o'qituvchi bilan", offer_sub:"Akademiyadagi birinchi dars — unda aynan sening darajangni tahlil qilamiz",
+  submit:"Tahlilga yozilish <span class=\"arr\">→</span>",
+  done_h:"Tahlildagi joy<br>seniki, ",
+  done_p:"Administrator tez orada sen bilan bog'lanib, qulay kunni tanlaydi. O'zing bilan 2–3 ta rasmingni olib kel: o'qituvchi ularni imtihondagi xatolar bilan birga darsda tahlil qiladi.",
+  share_h:"Dugonang bilan birga kiryapsanmi?", share_p:"Unga imtihonni yubor, ballaringizni solishtiring",
+  tg:"Assalomu alaykum! Men {name}, fashion-illyustratsiya bo'yicha mini-imtihondan o'tdim ({t} tadan {s}). O'qituvchi bilan tahlilga 100 000 so'mga yozilmoqchiman. Raqamim: +998{phone}"
+ }
+};
+
+const BLOCKS = {
+  A:{name:["Фигура и пропорции","Qomat va proporsiyalar"],roman:"I"},
+  B:{name:["Ткани и свет","Matolar va yorug'lik"],roman:"II"},
+  C:{name:["Композиция и цвет","Kompozitsiya va rang"],roman:"III"},
+  D:{name:["Экзаменационное задание","Imtihon topshirig'i"],roman:"IV"}
+};
+const INTRO = ["Знакомство","Tanishuv"];
+const LETS = [["А","Б","В","Г"],["A","B","C","D"]];
+const L = () => LETS[F.lang === "uz" ? 1 : 0];
+
+const Q = [
+  {intro:"exam", q:["Когда планируешь сдавать творческий экзамен?","Ijodiy imtihonni qachon topshirmoqchisan?"], opts:[
+    ["Летом 2027, в этом году","2027-yil yozida, shu yil"],["Через год","Bir yildan keyin"],["Через 2 года и позже","2 yil va undan keyin"],["Пока не решила","Hali qaror qilmadim"]]},
+  {intro:"target", q:["Куда хочешь поступать?","Qayerga o'qishga kirmoqchisan?"], opts:[
+    ["В вуз в Узбекистане","O'zbekistondagi oliygohga"],["В вуз за границей","Chet eldagi oliygohga"],["Ещё выбираю","Hali tanlayapman"]]},
+
+  {block:"A", q:["Какая фигура построена по пропорциям фэшн-иллюстрации?","Qaysi qomat fashion-illyustratsiya proporsiyalari bo'yicha qurilgan?"], hint:["Золотая линейка слева считает «головы»","Chapdagi oltin chizg'ich «bosh»larni sanaydi"], grid:3,
+    opts:[{svg:()=>figSVG(7.5)},{svg:()=>figSVG(6)},{svg:()=>figSVG(9),ok:1}],
+    ex:["Фэшн-фигура — 9 голов и больше, вытягивают в основном ноги. 7,5 голов — реальные пропорции взрослого человека, 6 — пропорции подростка.","Fashion-qomat — 9 bosh va undan ko'p, asosan oyoqlar cho'ziladi. 7,5 bosh — katta odamning haqiqiy proporsiyalari, 6 — o'smirniki."]},
+  {block:"A", q:["От какой точки опускают линию баланса фигуры?","Qomatning muvozanat chizig'i qaysi nuqtadan tushiriladi?"], img:()=>balanceSVG(L()),
+    opts:[{t:()=>["Точка "+L()[0],L()[0]+" nuqta"]},{t:()=>["Точка "+L()[1],L()[1]+" nuqta"],ok:1},{t:()=>["Точка "+L()[2],L()[2]+" nuqta"]},{t:()=>["Точка "+L()[3],L()[3]+" nuqta"]}],
+    ex:["Линию баланса опускают вертикально от ямки между ключицами (точка Б). У фигуры, которая стоит на одной ноге, она должна прийти в опорную стопу, иначе фигура «падает».","Muvozanat chizig'i o'mrov suyaklari orasidagi chuqurchadan (B nuqta) tik tushiriladi. Bir oyog'ida turgan qomatda u tayanch oyoqqa tushishi kerak, aks holda qomat «yiqiladi»."]},
+  {block:"A", q:["За счёт чего в фэшн-эскизе удлиняют фигуру?","Fashion-eskizda qomat nima hisobiga cho'ziladi?"],
+    opts:[{t:["За счёт торса","Tana hisobiga"]},{t:["За счёт шеи и головы","Bo'yin va bosh hisobiga"]},{t:["За счёт ног, от бедра до стопы","Oyoqlar hisobiga, sondan tovongacha"],ok:1},{t:["Равномерно всю фигуру","Butun qomat bir tekis"]}],
+    ex:["Удлиняют ноги. Торс и голова почти сохраняют реальные пропорции, поэтому фигура выглядит изящно, а не «растянутой».","Oyoqlar cho'ziladi. Tana va bosh deyarli haqiqiy proporsiyalarni saqlaydi, shuning uchun qomat «cho'zilgan» emas, nafis ko'rinadi."]},
+
+  {block:"B", q:["Какую ткань передаёт этот рисунок?","Bu rasm qaysi matoni ifodalaydi?"], img:()=>satinSVG("q"),
+    opts:[{t:["Шерсть","Jun"]},{t:["Атлас","Atlas"],ok:1},{t:["Трикотаж","Trikotaj"]},{t:["Лён","Zig'ir"]}],
+    ex:["Атлас узнают по резким светлым бликам на гребнях складок и глубоким теням между ними. Матовые ткани (шерсть, лён, трикотаж) дают мягкие переходы без бликов.","Atlasni burmalar qirrasidagi keskin yorug' bliklar va ular orasidagi chuqur soyalardan tanish mumkin. Xira matolar (jun, zig'ir, trikotaj) bliksiz yumshoq o'tishlar beradi."]},
+  {block:"B", q:["Где нарисован шифон?","Shifon qayerda chizilgan?"], grid:2,
+    opts:[{svg:()=>denimSVG("a")},{svg:()=>knitSVG("b")},{svg:()=>chiffonSVG("c"),ok:1},{svg:()=>furSVG("d")}],
+    ex:["Шифон прозрачный: сквозь него видно то, что под ним, а там, где слои накладываются, цвет плотнее. Остальные — деним, трикотаж и мех.","Shifon shaffof: uning ostidagi narsa ko'rinib turadi, qatlamlar ustma-ust tushgan joyda rang quyuqroq. Qolganlari — denim, trikotaj va mo'yna."]},
+  {block:"B", q:["Откуда падает свет на эту юбку?","Bu yubkaga yorug'lik qayerdan tushyapti?"], img:()=>lightSVG(),
+    opts:[{t:["Слева сверху","Chapdan yuqoridan"],ok:1},{t:["Справа сверху","O'ngdan yuqoridan"]},{t:["Снизу","Pastdan"]},{t:["Прямо спереди","To'g'ridan oldindan"]}],
+    ex:["Светлая сторона и блик слева, собственная тень и падающая тень справа. Значит, свет падает слева сверху. На экзамене свет должен быть единым на всём листе.","Yorug' tomon va blik chapda, xususiy va tushuvchi soya o'ngda. Demak, yorug'lik chapdan yuqoridan tushyapti. Imtihonda butun varaqda yorug'lik yagona bo'lishi kerak."]},
+
+  {block:"C", q:["Какой лист скомпонован лучше всего?","Qaysi varaq eng yaxshi joylashtirilgan?"], grid:2,
+    opts:[{svg:()=>sheetSVG("tiny","1")},{svg:()=>sheetSVG("cut","2")},{svg:()=>sheetSVG("good","3"),ok:1},{svg:()=>sheetSVG("edge","4")}],
+    ex:["На листе В фигура крупная, целиком помещается, есть воздух сверху и снизу, а свободное место занято технической прорисовкой вещей. Мелкая фигура, обрезанные стопы и фигура у края — частые ошибки на экзамене.","C varaqda qomat katta, to'liq sig'gan, yuqori va pastda bo'sh joy bor, qolgan joyni esa buyumlarning texnik chizmalari egallagan. Mayda qomat, kesilgan oyoqlar va chetga yopishgan qomat — imtihonda ko'p uchraydigan xatolar."]},
+  {block:"C", q:["Какой силуэт у этого платья?","Bu ko'ylakning silueti qanday?"], img:()=>dressSVG(),
+    opts:[{t:["А-силуэт (трапеция)","A-siluet (trapetsiya)"]},{t:["Х-силуэт","X-siluet"],ok:1},{t:["Н-силуэт (прямой)","H-siluet (to'g'ri)"]},{t:["О-силуэт (кокон)","O-siluet (pilla)"]}],
+    ex:["Х-силуэт: подчёркнутые плечи, узкая талия и расширенный низ. Силуэт — первое, что видит комиссия, его нужно читать с одного взгляда.","X-siluet: urg'u berilgan yelkalar, ingichka bel va kengaygan etak. Siluet — komissiya birinchi ko'radigan narsa, u bir qarashda o'qilishi kerak."]},
+  {block:"C", q:["Какая палитра контрастная (комплементарная)?","Qaysi palitra kontrastli (komplementar)?"], grid:2,
+    opts:[{svg:()=>palSVG(["#E8D9C5","#C9A27A","#7A5638"])},{svg:()=>palSVG(["#1F4E9C","#F28C28","#F6F3EE"]),ok:1},{svg:()=>palSVG(["#2b2b2b","#7d7d7d","#d6d6d6"])},{svg:()=>palSVG(["#F2C6D8","#C48BD0","#7B4FA0"])}],
+    ex:["Синий и оранжевый стоят напротив друг друга в цветовом круге, это комплементарная пара. А и Г — сближенные (родственные) гаммы, В — монохром.","Ko'k va to'q sariq rang doirasida bir-biriga qarama-qarshi turadi — bu komplementar juftlik. A va D — yaqin (qarindosh) gammalar, C — monoxrom."]},
+
+  {block:"D", q:["На экзамене 4 часа на эскиз коллекции. Как распределить время?","Imtihonda kolleksiya eskizi uchun 4 soat beriladi. Vaqtni qanday taqsimlash kerak?"],
+    opts:[{t:["Сразу начать чистовой рисунок, чтобы успеть","Ulgurish uchun darhol yakuniy rasmni boshlash"]},{t:["30–40 минут на идеи и наброски, около 2,5 часов на чистовой, остальное на детали и проверку","G'oya va qoralamalarga 30–40 daqiqa, yakuniy rasmga taxminan 2,5 soat, qolgani detallar va tekshirishga"],ok:1},{t:["Половину времени искать идею","Vaqtning yarmini g'oya izlashga sarflash"]},{t:["Сначала сделать фон, потом фигуры","Avval fonni, keyin qomatlarni chizish"]}],
+    ex:["Без быстрых набросков легко застрять в чистовике и не успеть. Сначала короткий поиск идеи и композиции, потом основное время на чистовой, в конце — детали и проверка пропорций.","Tezkor qoralamalarsiz yakuniy rasmda tiqilib qolib, ulgurmaslik oson. Avval g'oya va kompozitsiyani qisqa izlash, keyin asosiy vaqt yakuniy rasmga, oxirida detallar va proporsiyalarni tekshirish."]},
+  {block:"D", q:["Тема задания: «Образ по мотивам архитектуры». Какое решение комиссия оценит выше?","Topshiriq mavzusi: «Arxitektura motivlari asosidagi obraz». Komissiya qaysi yechimni yuqoriroq baholaydi?"],
+    opts:[{t:["Платье с принтом в виде здания","Bino tasviri tushirilgan ko'ylak"]},{t:["Модель на фоне красивого здания","Chiroyli bino fonidagi model"]},{t:["Силуэт и детали повторяют формы и ритм архитектуры: арки, колонны, линии","Siluet va detallar arxitektura shakllari va ritmini takrorlaydi: arkalar, ustunlar, chiziqlar"],ok:1},{t:["Платье в цветах здания","Bino ranglaridagi ko'ylak"]}],
+    ex:["Тему раскрывают через форму: силуэт, конструкцию, ритм деталей. Принт, фон или цвет — самые буквальные решения, их оценивают ниже.","Mavzu shakl orqali ochiladi: siluet, konstruksiya, detallar ritmi. Print, fon yoki rang — eng to'g'ridan-to'g'ri yechimlar, ular pastroq baholanadi."]},
+  {block:"D", q:["Что комиссия оценивает в первую очередь?","Komissiya birinchi navbatda nimani baholaydi?"],
+    opts:[{t:["Количество деталей и украшений","Detallar va bezaklar soni"]},{t:["Раскрытие темы, грамотную фигуру и цельную подачу","Mavzuning ochilishi, to'g'ri qomat va yaxlit taqdimot"],ok:1},{t:["Насколько фигура похожа на фотографию","Qomat fotosuratga qanchalik o'xshashi"]},{t:["Яркость цветов","Ranglarning yorqinligi"]}],
+    ex:["Комиссия смотрит на раскрытие темы, пропорции и цельность листа. Много деталей не спасут работу с ошибками в фигуре.","Komissiya mavzu ochilishiga, proporsiyalarga va varaqning yaxlitligiga qaraydi. Ko'p detallar qomatida xatosi bor ishni qutqarmaydi."]}
+];
+const TOTAL = Q.filter(q => !q.intro).length, NINTRO = Q.length - TOTAL;
+const val = x => typeof x === "function" ? x() : x;
+
+const ADVICE = {
+  A:{weak:["Пропорции — первое, что смотрит комиссия. «Короткая» фигура или неустойчивая поза снижают балл, даже если подача красивая.","Proporsiyalar — komissiya birinchi qaraydigan narsa. «Kalta» qomat yoki beqaror poza taqdimot chiroyli bo'lsa ham ballni tushiradi."],
+     fix:["<b>Что делать:</b> выучить построение фигуры в 9 голов, линию баланса и 5–6 подиумных поз, чтобы рисовать их по памяти.","<b>Nima qilish kerak:</b> 9 boshli qomat qurilishini, muvozanat chizig'ini va 5–6 ta podium pozasini o'rganib, ularni xotiradan chiza olish."]},
+  B:{weak:["Если ткань не читается, эскиз выглядит как раскраска. На экзамене важно показать материал: блеск, прозрачность, фактуру и единый свет.","Mato o'qilmasa, eskiz bo'yama kitobga o'xshaydi. Imtihonda materialni ko'rsatish muhim: yaltirash, shaffoflik, faktura va yagona yorug'lik."],
+     fix:["<b>Что делать:</b> освоить маркеры и акварель по системе и отработать главные ткани: атлас, шифон, деним, трикотаж, мех, кожа.","<b>Nima qilish kerak:</b> markerlar va akvarelni tizimli o'zlashtirish va asosiy matolarni mashq qilish: atlas, shifon, denim, trikotaj, mo'yna, charm."]},
+  C:{weak:["Даже хорошая фигура теряется, если лист собран случайно, силуэт не читается, а цвета спорят друг с другом.","Varaq tasodifiy yig'ilsa, siluet o'qilmasa va ranglar bir-biri bilan «urishsa», yaxshi qomat ham yo'qolib qoladi."],
+     fix:["<b>Что делать:</b> научиться компоновать лист заранее, разобраться в силуэтах и собирать гармоничные палитры для коллекции.","<b>Nima qilish kerak:</b> varaqni oldindan joylashtirishni o'rganish, siluetlarni tushunish va kolleksiya uchun uyg'un palitralar yig'ish."]},
+  D:{weak:["Многие не проходят не из-за техники, а из-за подхода к заданию: раскрывают тему буквально или не укладываются во время.","Ko'pchilik texnika emas, topshiriqqa yondashuv sabab o'ta olmaydi: mavzuni to'g'ridan-to'g'ri ochishadi yoki vaqtga sig'ishmaydi."],
+     fix:["<b>Что делать:</b> потренироваться на реальных темах экзамена с таймером и научиться раскрывать тему через форму.","<b>Nima qilish kerak:</b> imtihonning haqiqiy mavzulari bo'yicha taymer bilan mashq qilish va mavzuni shakl orqali ochishni o'rganish."]}
+};
+const OFFER_ITEMS = {
+  A:[["Разберём построение фигуры","Qomat qurilishini tahlil qilamiz"],["Покажем, как рисовать фигуру в 9 голов и в движении, и поправим твои пропорции","9 boshli va harakatdagi qomatni qanday chizishni ko'rsatamiz va proporsiyalaringni to'g'rilaymiz"]],
+  B:[["Отработаем ткани и свет","Matolar va yorug'likni mashq qilamiz"],["Попробуешь передать ткань маркерами и акварелью под руководством преподавателя","O'qituvchi rahbarligida matoni markerlar va akvarel bilan ifodalab ko'rasan"]],
+  C:[["Соберём композицию листа","Varaq kompozitsiyasini yig'amiz"],["Разберём, как компоновать эскиз и подбирать палитру, чтобы работа смотрелась цельно","Ish yaxlit ko'rinishi uchun eskizni joylashtirish va palitra tanlashni tahlil qilamiz"]],
+  D:[["Разберём экзаменационное задание","Imtihon topshirig'ini tahlil qilamiz"],["Покажем, как раскрыть тему и уложиться во время на реальном примере","Haqiqiy misolda mavzuni qanday ochish va vaqtga sig'ishni ko'rsatamiz"]]
+};
+const OFFER_FIRST = [["Разберём твои ошибки и работы","Xatolaringni va ishlaringni tahlil qilamiz"],["Возьми 2–3 рисунка: преподаватель академии разберёт их вживую вместе с ошибками из экзамена","2–3 ta rasmingni olib kel: akademiya o'qituvchisi ularni imtihondagi xatolar bilan birga jonli tahlil qiladi"]];
+const OFFER_LAST = [["Составим твой план подготовки","Tayyorgarlik rejangni tuzamiz"],["Получишь персональный план до экзамена: что, в каком порядке и сколько времени прокачивать","Imtihongacha shaxsiy reja olasan: nimani, qaysi tartibda va qancha vaqt kuchaytirish kerak"]];
+const LEVELS = [
+  {min:10, s:["почти готова","deyarli tayyor"], t:["Ты хорошо понимаешь, что проверяют на экзамене","Imtihonda nima tekshirilishini yaxshi tushunasan"], d:["Теория у тебя сильная. Теперь важно, чтобы рука делала то же, что знает голова: отработать задания на время и отшлифовать подачу.","Nazariyang kuchli. Endi qo'ling ham boshing bilgan narsani qilishi muhim: topshiriqlarni vaqtga mashq qilish va taqdimotni sayqallash."]},
+  {min:6, s:["уверенный старт","ishonchli start"], t:["База есть, но на экзамене ты потеряешь баллы","Asos bor, lekin imtihonda ball yo'qotasan"], d:["Ты многое понимаешь, но в нескольких темах есть пробелы. Именно на них абитуриенты чаще всего теряют баллы. Это исправляется системной подготовкой.","Ko'p narsani tushunasan, lekin bir nechta mavzuda bo'shliqlar bor. Aynan ularda abituriyentlar ko'pincha ball yo'qotadi. Bu tizimli tayyorgarlik bilan tuzatiladi."]},
+  {min:0, s:["начало пути","yo'l boshi"], t:["Ты в начале пути, и это нормально","Sen yo'l boshidasan, va bu normal"], d:["Большинство наших учениц начинали с этого уровня. Чтобы поступить, нужно собрать базу: фигура, ткани, композиция. С правильной системой это реально.","O'quvchilarimizning ko'pchiligi aynan shu darajadan boshlagan. O'qishga kirish uchun asos kerak: qomat, matolar, kompozitsiya. To'g'ri tizim bilan bu haqiqatan ham mumkin."]}
+];
+const EXAM_LINES = [
+  [["До экзамена меньше года","Imtihongacha bir yildan kam qoldi"],["Времени мало, но его хватит, если начать прямо сейчас и заниматься по плану. Самостоятельно закрыть эти пробелы за несколько месяцев сложно.","Vaqt kam, lekin hozirdan reja bo'yicha shug'ullansang, yetadi. Bu bo'shliqlarni bir necha oyda mustaqil yopish qiyin."]],
+  [["До экзамена около года","Imtihongacha taxminan bir yil"],["Это оптимальный срок: успеешь закрыть пробелы и собрать сильное портфолио, если начнёшь в ближайший месяц.","Bu optimal muddat: yaqin bir oy ichida boshlasang, bo'shliqlarni yopib, kuchli portfolio yig'ishga ulgurasan."]],
+  [["У тебя есть фора","Senda vaqt zaxirasi bor"],["Те, кто начинает за 1,5–2 года, приходят на экзамен самыми подготовленными. Главное — использовать это время системно.","1,5–2 yil oldin boshlaganlar imtihonga eng tayyor holda keladi. Asosiysi — bu vaqtdan tizimli foydalanish."]],
+  [["Срок пока не выбран","Muddat hali tanlanmagan"],["Даже если ты ещё решаешь, базу стоит собрать заранее: фигура и ткани нужны для любого вуза по дизайну одежды.","Hali qaror qilayotgan bo'lsang ham, asosni oldindan yig'ish kerak: qomat va matolar kiyim dizayni bo'yicha istalgan oliygoh uchun kerak."]]
+];
+
+let i = 0, answers = [], result = null, locked = false;
+document.querySelectorAll('[data-go="start"]').forEach(b => b.onclick = () => { i = 0; answers = []; render(); F.show("#s-quiz","quiz"); F.track("start_test"); });
+
+function optLabel(q, k){ const o = q.opts[k]; return o.svg ? [ "вариант " + LETS[0][k], LETS[1][k] + " variant" ] : val(o.t); }
+
+function render(){
+  const it = Q[i];
+  $("#counter").textContent = it.intro ? T("counter_intro", {n:i+1, t:NINTRO}) : T("counter", {n:i-NINTRO+1, t:TOTAL});
+  $("#bar").style.width = (i/Q.length*100) + "%";
+  $("#back").classList.toggle("show", i > 0);
+  $("#qblock").innerHTML = it.intro ? tr(INTRO) : `<span class="num">${BLOCKS[it.block].roman}</span>${tr(BLOCKS[it.block].name)}`;
+  $("#qtext").textContent = tr(it.q);
+  $("#qhint").textContent = it.hint ? tr(it.hint) : "";
+  $("#qimg").innerHTML = it.img ? `<div class="qimg">${it.img()}</div>` : "";
+  $("#honest").style.display = it.intro ? "none" : "";
+  const box = $("#opts"); box.innerHTML = "";
+  box.className = "opts" + (it.grid ? " grid" : ""); box.style.setProperty("--cols", it.grid || 2);
+  it.opts.forEach((o,k) => {
+    const b = document.createElement("button"), sel = answers[i] === k ? " sel" : "";
+    if (it.intro){ b.className = "opt"+sel; b.innerHTML = `<span class="mk"></span><span>${tr(o)}</span>`; }
+    else if (o.svg){ b.className = "opt img"+sel; b.innerHTML = `${o.svg()}<span class="lb"><span class="mk"></span>${L()[k]}</span>`; }
+    else { b.className = "opt"+sel; b.innerHTML = `<span class="mk"></span><span>${tr(val(o.t))}</span>`; }
+    b.onclick = () => pick(k, b);
+    box.appendChild(b);
+  });
+}
+function pick(k, el){
+  if (locked) return; locked = true; answers[i] = k;
+  document.querySelectorAll(".opt").forEach(o => o.classList.remove("sel")); el.classList.add("sel");
+  const it = Q[i];
+  F.question(i+1, Q.length, it.intro ? F.ru(it.opts[k]) : (F.ru(optLabel(it,k)) + (it.opts[k].ok ? " ✓" : " ✗")));
+  setTimeout(() => { locked = false; if (i < Q.length-1){ i++; render(); } else finish(); }, 340);
+}
+$("#back").onclick = () => { if (i > 0){ i--; render(); } };
+
+function finish(){
+  $("#bar").style.width = "100%";
+  const per = {A:0,B:0,C:0,D:0}; let score = 0; const rows = [];
+  Q.forEach((q,idx) => {
+    if (q.intro) return;
+    const ok = !!q.opts[answers[idx]].ok; if (ok){ score++; per[q.block]++; }
+    rows.push({ q, ok, yk: answers[idx], ck: q.opts.findIndex(o => o.ok) });
+  });
+  const keys = Object.keys(BLOCKS), sorted = [...keys].sort((a,b) => per[a]-per[b]);
+  let weakKeys = sorted.filter(k => per[k] <= 1).slice(0,2); if (!weakKeys.length) weakKeys = [sorted[0]];
+  const lv = LEVELS.find(l => score >= l.min);
+  result = { score, per, rows, weakKeys, lv };
+  F.show("#s-load","load");
+  document.querySelectorAll("#steps li").forEach((li,n) => setTimeout(() => li.classList.add("on"), 450+n*650));
+  setTimeout(() => {
+    renderResult(true); F.show("#s-result","result");
+    F.track("result_view", score + "/" + TOTAL + " · " + F.ru(lv.s), { score: score + "/" + TOTAL });
+    F.px("CompleteRegistration", { content_name:"ekzamen", value:score });
+  }, 3300);
+}
+
+function renderResult(anim){
+  const { score, per, rows, weakKeys, lv } = result;
+  const el = $("#pct"); $("#ofmax").textContent = "/" + TOTAL;
+  if (anim && score){ let n = 0; const s = setInterval(() => { n++; if (n >= score){ n = score; clearInterval(s); } el.textContent = n; }, 90); } else el.textContent = score;
+  $("#level").textContent = tr(lv.s); $("#levelT").textContent = tr(lv.t); $("#levelD").textContent = tr(lv.d);
+  const sc = $("#scale"); sc.innerHTML = ""; for (let k=0;k<TOTAL;k++){ const d = document.createElement("div"); if (k < score) d.className = "f"; sc.appendChild(d); }
+  $("#skills").innerHTML = Object.keys(BLOCKS).map(k => {
+    const v = per[k], status = v === 3 ? T("st_strong") : v === 2 ? T("st_gap") : T("st_weak");
+    return `<div class="skill ${weakKeys.includes(k)?'weak':''}"><div class="row"><span class="nm"><span class="roman">${BLOCKS[k].roman}</span>${tr(BLOCKS[k].name)}</span><span class="v">${T("of3",{v})}</span></div><div class="tr"><i data-w="${v/3*100}" style="width:${anim?0:v/3*100}%"></i></div><div class="st">${status}</div></div>`;
+  }).join("");
+  if (anim) setTimeout(() => document.querySelectorAll(".skill .tr i").forEach(x => x.style.width = x.dataset.w + "%"), 250);
+  $("#weak").innerHTML = weakKeys.map(k => `<div class="box g"><h4>${tr(BLOCKS[k].name)}</h4><p>${tr(ADVICE[k].weak)}</p><div class="fix">${tr(ADVICE[k].fix)}</div></div>`).join("");
+  const exIdx = Q.findIndex(q => q.intro === "exam"), ex = EXAM_LINES[answers[exIdx] ?? 3];
+  $("#timeline").innerHTML = `<div class="eyebrow">${tr(ex[0])}</div><p>${tr(ex[1])}</p><p class="s">${T("timeline_s")}</p>`;
+  const lbl = (r,k) => { const o = r.q.opts[k]; return o.svg ? T("variant", {l:L()[k]}) : tr(val(o.t)); };
+  const ordered = [...rows.filter(r => !r.ok), ...rows.filter(r => r.ok)];
+  const opened = $("#toggleRv").style.display === "none" && !anim;
+  $("#review").innerHTML = ordered.map((r,idx) => `<div class="rv ${r.ok?'ok':''}" ${idx>=4 && !opened ? 'data-more hidden' : ''}>
+     <div class="h"><span>${tr(BLOCKS[r.q.block].name)}</span><b>${r.ok ? T("rv_ok") : T("rv_bad")}</b></div>
+     <div class="q">${tr(r.q.q)}</div>
+     <div class="a"><span>${T("your")}</span> ${lbl(r,r.yk)}${r.ok ? "" : `<br><span>${T("right")}</span> ${lbl(r,r.ck)}`}</div>
+     <div class="e">${tr(r.q.ex)}</div></div>`).join("");
+  if (anim) $("#toggleRv").style.display = ordered.length > 4 ? "" : "none";
+  $("#toggleRv").onclick = () => { document.querySelectorAll("[data-more]").forEach(x => x.hidden = false); $("#toggleRv").style.display = "none"; F.track("review_open"); };
+  const mistakes = rows.filter(r => !r.ok).length;
+  $("#bridgeT").innerHTML = mistakes ? T("bridge", { m:mistakes, w: tr(BLOCKS[weakKeys[0]].name).toLowerCase() }) : T("bridge0");
+  const items = [OFFER_FIRST, OFFER_ITEMS[weakKeys[0]], OFFER_LAST];
+  $("#offerList").innerHTML = items.map((it,n) => `<li><span class="roman">${["I","II","III"][n]}</span><div><div class="t">${tr(it[0])}</div><div class="s">${tr(it[1])}</div></div></li>`).join("");
+  if (anim) F.startTimer();
+}
+
+F.initForm({
+  data: () => {
+    const anketa = Q.filter(q => q.intro).map(q => F.ru(q.q) + " " + F.ru(q.opts[answers[Q.indexOf(q)]] || "")).join(" | ");
+    const mist = result.rows.filter(r => !r.ok).map(r => F.ru(r.q.q)).join(" | ");
+    return { score: result.score + "/" + TOTAL, level: F.ru(result.lv.s), weak: result.weakKeys.map(k => F.ru(BLOCKS[k].name)).join(", "), anketa, answers: "Ошибки: " + (mist || "нет") };
+  },
+  tg: (name, digits) => T("tg", { name, s: result.score, t: TOTAL, phone: digits })
+});
+
+F.init({ id:"ekzamen", name:"Экзамен", i18n:I18N, onLang: () => {
+  const scr = document.querySelector(".screen.active").id;
+  if (scr === "s-quiz") render();
+  if (scr === "s-result" && result) renderResult(false);
+}});
+})();
+</script>
+</body>
+</html>
